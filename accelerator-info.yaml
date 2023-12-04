@@ -1,0 +1,15 @@
+id: b393dd49-652f-4a65-a9db-ba28aa5a8cbf
+timestamp: 2023-12-04T16:52:17.095Z
+source: TAP-GUI
+username: stuartblackburnvmware
+accelerator:
+  name: appsso-starter-java
+fragments:
+  - name: build-wrapper-gradle
+  - name: tap-workload
+options:
+  bsGitBranch: main
+  projectName: appsso-starter-java
+  includeBuildToolWrapper: true
+  appssoOfferingName: my-login
+  bsGitRepository: github.com?owner=stuartblackburnvmware&repo=appsso-starter-java
