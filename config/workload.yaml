@@ -16,11 +16,11 @@ spec:
     - name: live-update
       value: "true"
   serviceClaims:
-    - name: appsso-starter-java
+    - name: my-workload
       ref:
         apiVersion: services.apps.tanzu.vmware.com/v1alpha1
         kind: ClassClaim
-        name: appsso-starter-java
+        name: my-workload
   source:
     git:
       url: https://github.com/stuartblackburnvmware/appsso-starter-java
