@@ -20,7 +20,7 @@ spec:
       ref:
         apiVersion: services.apps.tanzu.vmware.com/v1alpha1
         kind: ClassClaim
-        name: appsso-starter-java
+        name: unsafe-login-class-claim
   source:
     git:
       url: https://github.com/stuartblackburnvmware/appsso-starter-java
