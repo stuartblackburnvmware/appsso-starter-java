@@ -20,7 +20,7 @@ spec:
       ref:
         apiVersion: services.apps.tanzu.vmware.com/v1alpha1
         kind: ClassClaim
-        name: azure-class-claim
+        name: appsso-starter-java
   source:
     git:
       url: https://github.com/stuartblackburnvmware/appsso-starter-java
