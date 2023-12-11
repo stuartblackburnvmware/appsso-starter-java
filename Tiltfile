@@ -12,7 +12,7 @@ k8s_custom_deploy(
     deps=['build.gradle', 'src'],
     container_selector='workload',
     live_update=[
-        sync('.', '/workspace/')
+        sync('./src/main/resources/templates', '/workspace/templates')
     ]
 )
 
