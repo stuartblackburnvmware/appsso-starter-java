@@ -9,10 +9,10 @@ k8s_custom_deploy(
                " --namespace " + NAMESPACE +
                " --yes --output yaml",
     delete_cmd="tanzu apps workload delete -f config/workload.yaml --namespace " + NAMESPACE + " --yes",
-    deps=['pom.xml', './target/classes'],
+    deps=['build.gradle', 'src'],
     container_selector='workload',
     live_update=[
-      sync('./src/main', '/workspace/BOOT-INF/classes')
+        sync('.', '/workspace/')
     ]
 )
 
