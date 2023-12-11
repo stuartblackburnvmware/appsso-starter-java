@@ -12,7 +12,7 @@ k8s_custom_deploy(
     deps=['pom.xml', './target/classes'],
     container_selector='workload',
     live_update=[
-      sync('./target/classes', '/workspace/BOOT-INF/classes')
+      sync('./src/main', '/workspace/BOOT-INF/classes')
     ]
 )
 
