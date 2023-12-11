@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
@@ -17,8 +17,17 @@
 
 <section class="container mt-3 text-center">
 	<section class="mt-3">
-		<p th:utext="${'Hello, '+username+'!'}"></p>
+		<p th:utext="${'Hello, ' + username + '!'}"></p>
 		<p>You are signed in.</p>
+		<!-- Display OIDC token claims -->
+		<div th:if="${#authentication.principal != null}">
+			<h2>OIDC Token Claims:</h2>
+			<ul>
+				<li th:each="claim : ${#authentication.principal.claims}">
+					<span th:text="${claim.key}"></span>: <span th:text="${claim.value}"></span>
+				</li>
+			</ul>
+		</div>
 	</section>
 	<section class="mt-3">
 		<form th:name="${'logout-form'}" th:action="@{/logout}"
